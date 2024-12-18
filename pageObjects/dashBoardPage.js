@@ -8,6 +8,8 @@ class dashBoardPage {
         expect(await page.locator(this.dashboardText)).toBeVisible();
 
         expect(await page.locator(this.dashboardText).textContent()).toContain("Dash");
+
+        console.log(await page.locator(this.dashboardText).textContent());
     };
 }
 
