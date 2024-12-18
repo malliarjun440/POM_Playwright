@@ -1,0 +1,17 @@
+{
+  "name": "pom_playwright",
+  "version": "1.0.0",
+  "description": "This is Playwright tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mallikarjuna",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.49.0",
+    "chance": "^1.1.12",
+    "dotenv": "^16.4.7",
+    "playwright": "^1.49.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "environments": {
+        "development" : "https://google.com",
+        "QA" : "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+        "UAT" : "https://test.UAT.com",
+        "PROD" : "https://test.PROD.com"
+    },
+
+    "currentEnvironment" : "QA"
+}
