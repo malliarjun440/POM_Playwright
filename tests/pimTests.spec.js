@@ -11,7 +11,7 @@ test.describe.serial.only("orange Hrm PIM Page", () => {
 test.beforeEach(async ({ page }) => {
     //navigate or launch website
     await basePage.launchWebsite(page);
-    await loginPage.login(page, "Admin", "admin123");
+    await loginPage.login(page, process.env.ADMINUSERNAME, process.env.ADMINPASSWORD);
 });
 
 test("Add user from PIM page", async ({page}) => {
