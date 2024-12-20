@@ -20,7 +20,7 @@ test("Login and Logout Tests", async ({page}) => {
    
     // await page.waitForTimeout(3000);
 
-    await loginPage.login(page, "Admin1", "admin123");
+    await loginPage.login(page, process.env.ADMINUSERNAME, process.env.ADMINPASSWORD);
 
     await dashBoardPage.verifyDashboardPageVisible(page);
 
@@ -32,7 +32,7 @@ test("Create New User", async ({page}) => {
    
     // await page.waitForTimeout(3000);
 
-    await loginPage.login(page, "Admin", "admin123");
+    await loginPage.login(page, process.env.ADMINUSERNAME, process.env.ADMINPASSWORD);
 
     await adminpage.addUser(page);
 
