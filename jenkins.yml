@@ -10,15 +10,15 @@ pipeline{
     stage('Install Dependecies'){
       steps{
        echo "Installing Dependencies......"
-        sh 'npm install'
-        sh 'npx playwright install'
+        bat 'npm install'
+        bat 'npx playwright install'
         }
        }
    
     stage('Run Playwright Tests'){
       steps{
       echo "Running playwright test"
-      sh 'npx playwright test'
+      bat 'npx playwright test'
       }
     }
    
