@@ -24,3 +24,21 @@ test.afterEach(async ({ page }) => {
    await page.close();
 });
 });
+
+//Fresh Project 
+//Login to Github
+//Create a repository public / private
+//cmd prompt
+// git init
+// .gitigone file whatever files you don't want you can put path in gitignore file
+// git add .  // this command use to add your changes in to git 
+
+//if you want to add specic file
+
+// git add "/test/admintest"
+
+// git commit -m "First commit"
+
+// create branch - git branch -M main
+
+//push you changes to main branch --> git push -u origin main
