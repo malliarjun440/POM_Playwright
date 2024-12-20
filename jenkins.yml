@@ -1,24 +1,27 @@
 pipeline{
    agent any
    environment {
-    CURRENTENV = QA
+    CURRENTENV = "QA"
     ADMINUSERNAME = "Admin"
     ADMINPASSWORD = "admin123"
    } 
    stages {
+   
     stage('Install Dependecies'){
       steps{
        echo "Installing Dependencies......"
-        npm install
-        npx playwright install
+        sh 'npm install'
+        sh 'npx playwright install'
         }
        }
+   
     stage('Run Playwright Tests'){
       steps{
       echo "Running playwright test"
-      npx playwright test
+      sh 'npx playwright test'
       }
     }
+   
     stage('Clean Up'){
       steps{
       echo "Cleaning Up Workspace"
