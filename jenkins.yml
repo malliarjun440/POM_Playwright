@@ -1,22 +1,29 @@
-pipeline:
-   agent: any
-   environment:
-    CURRENTENV: QA
-    ADMINUSERNAME: "Admin"
-    ADMINPASSWORD: "admin123"
-   stages:
-    - stage: Install Dependecies
-      steps:
-      script:
-        - echo "Installing Dependencies......"
-        - npm install
-        - npx playwright install
-    - stage: Run Playwright Tests
-      - echo "Running playwright test"
-      - npx playwright test
-
-    - stage:
-      steps:
-      script:
-        - cleanWs();
-      
+pipeline{
+   agent any
+   environment {
+    CURRENTENV = QA
+    ADMINUSERNAME = "Admin"
+    ADMINPASSWORD = "admin123"
+   } 
+   stages {
+    stage('Install Dependecies'){
+      steps{
+       echo "Installing Dependencies......"
+        npm install
+        npx playwright install
+        }
+       }
+    stage('Run Playwright Tests'){
+      steps{
+      echo "Running playwright test"
+      npx playwright test
+      }
+    }
+    stage('Clean Up'){
+      steps{
+      echo "Cleaning Up Workspace"
+      cleanWs()
+      }
+    }
+  }
+}   
